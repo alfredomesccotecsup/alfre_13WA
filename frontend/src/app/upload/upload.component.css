@@ -1,0 +1,133 @@
+/* Estilos generales para el contenedor principal */
+.app-container::before {
+    content: "";
+    background: url('https://www.gigabyte.com/FileUpload/MX/KeyFeature/562/images/G9_gif_02_fix.gif') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.7);
+    transition: filter 0.5s ease;
+}
+
+.app-container:hover::before {
+    filter: brightness(1);
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    transition: padding 0.5s ease;
+}
+
+.app-container:hover {
+    padding-top: 50px;
+}
+
+/* Estilos compartidos para texto con sombra */
+.app-container h2,
+.app-container label,
+.app-container input,
+.app-container button,
+.app-container .btn-volver,
+.app-container .custom-btn {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para el título en español */
+.app-container h2 {
+    text-align: center;
+    color: #ff5e78; /* Nuevo color */
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilos compartidos para el formulario de carga */
+.app-container .upload-form {
+    background: rgba(255, 255, 255, 0.95);
+    color: #444; /* Nuevo color */
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-container .upload-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos compartidos para etiquetas de entrada */
+.app-container label {
+    display: block;
+    margin-top: 15px;
+    color: #ff5e78; /* Nuevo color */
+    font-weight: bold;
+}
+
+/* Estilos compartidos para campos de entrada de texto y de archivo */
+.app-container input[type="text"],
+.app-container input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ff5e78; /* Nuevo color */
+    background: rgba(255, 255, 255, 0.98);
+    color: #444; /* Nuevo color */
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+}
+
+.app-container input[type="text"]:focus,
+.app-container input[type="file"]:focus {
+    box-shadow: 0 0 15px rgba(255, 94, 120, 0.8); /* Nuevo color */
+}
+
+/* Estilos compartidos para botones de carga y volver */
+.app-container button,
+.app-container .btn-volver,
+.app-container .custom-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+/* Estilos al pasar el mouse sobre los botones de carga y volver */
+.app-container button:hover,
+.app-container .btn-volver:hover,
+.app-container .custom-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 94, 120, 0.8); /* Nuevo color */
+}
+
+.app-container button:hover,
+.app-container .btn-volver:hover {
+    background: #ff4d99;
+}
+
+.app-container .custom-btn:hover {
+    background: #ff6e4d;
+}
+
+/* Animación del formulario al pasar el mouse */
+.app-container .upload-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}

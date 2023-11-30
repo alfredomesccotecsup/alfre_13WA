@@ -1,0 +1,138 @@
+/* Estilos generales */
+.app-container::before {
+    content: "";
+    background: url('https://wallpaperaccess.com/full/8642932.gif') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.8);
+    animation: backgroundAnimation 10s infinite alternate; /* Animación del fondo */
+}
+
+@keyframes backgroundAnimation {
+    from {
+        filter: brightness(1);
+    }
+    to {
+        filter: brightness(0.8);
+    }
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif; /* Cambiado el tipo de fuente */
+}
+
+/* Estilos del formulario */
+.app-container form {
+    background: rgba(0, 0, 0, 0.9); /* Cambiado el color de fondo */
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.app-container form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-container form label {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.app-container form input {
+    background: #333; /* Nuevo color */
+    color: #fff;
+    border: 1px solid #555; /* Nuevo color del borde */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.app-container form input::placeholder {
+    color: #888; /* Nuevo color del marcador de posición */
+}
+
+.app-container form button {
+    background: #ff4081; /* Nuevo color */
+    color: #fff;
+    border: none;
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 15px 30px; /* Ajuste del tamaño del botón */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    align-self: flex-end;
+}
+
+.app-container form button:hover {
+    background: #e91e63; /* Nuevo color al hacer hover */
+    transform: scale(1.1);
+}
+
+/* Estilos del encabezado */
+.app-container header {
+    background: rgba(0, 0, 0, 0.8); /* Cambiado el color de fondo */
+    color: #ff69b4; /* Cambiado el color del texto */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-container header h1 {
+    font-size: 3em; /* Tamaño de fuente aumentado */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.app-container header .header-buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Cambiado a columna */
+    margin-top: 20px; /* Ajuste del margen superior */
+}
+
+.app-container header .btn-upload,
+.app-container header .btn-logout {
+    display: inline-block;
+    padding: 12px 24px; /* Ajuste del tamaño del botón */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 25px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Ajuste del margen inferior */
+}
+
+.app-container header .btn-upload:hover,
+.app-container header .btn-logout:hover {
+    transform: scale(1.1); /* Aumento en la escala al hacer hover */
+}
+
+.app-container header .btn-upload {
+    background: #00bcd4; /* Nuevo color */
+    color: #fff;
+    text-decoration: none;
+}
+
+.app-container header .btn-logout {
+    background: #ff3d00; /* Nuevo color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
